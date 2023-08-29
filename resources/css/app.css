@@ -1,0 +1,129 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    background: #15202B;
+}
+
+.calBody {
+    background: #1E2732;
+    width: 100%;
+    max-width: 300px;
+    margin: 0 auto;
+    font-size: 24px;
+    text-align: center;
+    padding: 15px 0;
+    border-radius: 5px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.calRow {
+    width: 90%;
+    margin: 10px auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.calInput {
+    border: none;
+    background: #15202B;
+    height: 50px;
+    width: 90%;
+    border-radius: 4px;
+    margin: 10px auto;
+    color: #ffffff;
+    padding: 0 10px;
+}
+
+.calInput:focus {
+    outline: none;
+}
+
+.calBtn {
+    width: 23%;
+    padding: 10px;
+    color: white;
+    background: #15202B;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    box-shadow: 0 8px 10px rgba(0, 0, 0, 0.05);
+}
+
+.calBtn:focus {
+    outline: none;
+}
+
+.calBtn:active {
+    transform: translateY(2px);
+}
+
+.clear {
+    background: #d27b7b;
+    color: #ffffff;
+    font-weight: bolder;
+    font-size: 16px;
+}
+
+.op {
+    background: #9595d5;
+    color: #ffffff;
+    font-weight: bolder;
+    font-size: 16px;
+}
+
+.w-50{
+    width: 50%;
+}
+.del{
+    font-weight: bolder;
+    font-size: 16px;
+    background: #939393;
+}
+.reverse-sign{
+    background: #2E2E2E;
+}
+@keyframes vibration {
+    0% { transform: translate(calc(-50% + 1px), calc(-50% + 1px)) rotate(0deg); }
+    10% { transform: translate(calc(-50% - 1px), calc(-50% - 2px)) rotate(-1deg); }
+    20% { transform: translate(calc(-50% - 3px), calc(-50% + 0px)) rotate(1deg); }
+    30% { transform: translate(calc(-50% + 3px), calc(-50% + 2px)) rotate(0deg); }
+    40% { transform: translate(calc(-50% + 1px), calc(-50% - 1px)) rotate(1deg); }
+    50% { transform: translate(calc(-50% - 1px), calc(-50% + 2px)) rotate(-1deg); }
+    60% { transform: translate(calc(-50% - 3px), calc(-50% + 1px)) rotate(0deg); }
+    70% { transform: translate(calc(-50% + 3px), calc(-50% + 1px)) rotate(-1deg); }
+    80% { transform: translate(calc(-50% - 1px), calc(-50% - 1px)) rotate(1deg); }
+    90% { transform: translate(calc(-50% + 1px), calc(-50% + 2px)) rotate(0deg); }
+    100% { transform: translate(calc(-50% + 1px), calc(-50% - 2px)) rotate(-1deg); }
+}
+.vibrate {
+    animation: vibration 0.5s;
+    animation-iteration-count: infinite;
+}
+.error-popup {
+    position: fixed;
+    top: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.error-content {
+    width: 60vw;
+    padding: 20px;
+    background-color: rgba(255, 0, 0, 0.66);
+    color: white;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    border-radius: 8px;
+    text-align: center;
+}
